@@ -41,7 +41,6 @@ if angelsmods.industries.components then
       "circuit-blue-board",
       --"circuit-yellow-board" --crafted with 2 fluids
       "circuit-grey-board",
-      "circuit-grey-board-alternative",
       "circuit-red",
       "circuit-green",
       "circuit-orange",

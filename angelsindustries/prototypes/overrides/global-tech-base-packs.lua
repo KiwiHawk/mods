@@ -19,8 +19,7 @@ if angelsmods.industries.tech then
     -- SMELTING
     "angels-solder-smelting-basic",
     -- BIO PROCESSING
-    "bio-processing-brown",
-    "bio-paper-1",
+    "bio-processing-basic",
     -- INDUSTRIES
     "tech-red-circuit",
     "angels-components-mechanical-1",
@@ -163,6 +162,8 @@ if angelsmods.industries.tech then
   AI.pack_replace("bio-processing-crystal-splinter-2", "green", "orange")
   AI.pack_replace("bio-processing-crystal-splinter-3", "green", "orange")
   AI.pack_replace("bio-arboretum-2", "green", "orange")
+  AI.pack_replace("bio-paper-2", "blue", "orange")
+  AI.pack_replace("bio-processing-blue", "blue", "orange")
   --PETROCHEM
   AI.pack_replace("plastic-1", "green", "orange")
   --AI.pack_replace("resin-2", "blue","orange") -- needs melamine, which is quite deep in the tree, leave as blue
@@ -197,6 +198,8 @@ if angelsmods.industries.tech then
   -- SMELTING
   OV.remove_prereq("angels-metallurgy-4", "production-science-pack")
   OV.remove_science_pack("angels-tungsten-smelting-2", "production-science-pack")
+  -- BIOPROCESSING
+  OV.remove_prereq("bio-paper-3", "production-science-pack")
   -- INDUSTRIES
   AI.pack_replace("tech-yellow-circuit", "yellow", "blue")
   OV.remove_prereq("tech-yellow-circuit", "angels-components-batteries-5")

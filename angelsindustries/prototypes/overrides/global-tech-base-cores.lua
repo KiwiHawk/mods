@@ -26,8 +26,8 @@ if angelsmods.industries.tech then
   -- SMELTING
   AI.core_replace("angels-solder-smelting-basic", "processing", "basic")
   -- BIO PROCESSING
-  AI.core_replace("bio-processing-brown", "processing", "basic")
-  AI.core_replace("bio-paper-1", "processing", "basic")
+  AI.core_replace("bio-processing-basic", "processing", "basic")
+--  AI.core_replace("bio-paper-1", "processing", "basic")
   -- INDUSTRIES
   OV.set_science_pack("tech-red-circuit", "datacore-basic", 2)
   OV.set_science_pack("tech-green-circuit", "datacore-basic", 2)

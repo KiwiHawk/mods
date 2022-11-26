@@ -6,16 +6,12 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-brown",
+      "bio-processing-green",
     },
     effects = {
       {
         type = "unlock-recipe",
         recipe = "wood-pellets",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "bio-resin-wood-reprocessing",
       },
     },
     unit = {
@@ -582,6 +578,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
+      "logistic-science-pack",
       "bio-processing-brown",
     },
     effects = {
@@ -598,6 +595,7 @@ data:extend({
       count = 50,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 1 },
       },
       time = 30,
     },
@@ -611,9 +609,9 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-paper-1",
-      "chlorine-processing-1",
       "angels-nitrogen-processing-2",
       "angels-sulfur-processing-2",
+      "chemical-science-pack",
     },
     effects = {
       {
@@ -634,10 +632,11 @@ data:extend({
       },
     },
     unit = {
-      count = 50,
+      count = 100,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
+        { type = "item", name = "chemical-science-pack", amount = 1 },
       },
       time = 30,
     },
@@ -651,6 +650,7 @@ data:extend({
     prerequisites = {
       "bio-paper-2",
       "chlorine-processing-3",
+      "production-science-pack",
     },
     effects = {
       {
@@ -675,11 +675,12 @@ data:extend({
       },
     },
     unit = {
-      count = 50,
+      count = 150,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
         { type = "item", name = "logistic-science-pack", amount = 1 },
         { type = "item", name = "chemical-science-pack", amount = 1 },
+        { type = "item", name = "production-science-pack", amount = 1 },
       },
       time = 30,
     },

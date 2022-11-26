@@ -1,8 +1,5 @@
 local OV = angelsmods.functions.OV
 if angelsmods.industries.components then
-  OV.add_unlock("bio-paper-1", "circuit-grey-board-alternative")
-  OV.execute()
-
   data:extend({
     {
       type = "technology",
@@ -11,7 +8,7 @@ if angelsmods.industries.components then
       icon_size = 128,
       prerequisites = {
         "angels-solder-smelting-basic",
-        "bio-paper-1",
+        --"bio-paper-1",
       },
       effects = {
         {

@@ -208,7 +208,7 @@ data:extend({
       { type = "fluid", name = "water", amount = 50 },
     },
     results = {
-      { type = "item", name = "solid-wood-pulp", amount = 25 },
+      { type = "item", name = "solid-wood-pulp", amount = 30 },
       { type = "fluid", name = "liquid-brown-liquor", amount = 75 },
     },
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-wood-pulp"), 2, angelsmods.bioprocessing.number_tint),
@@ -307,7 +307,7 @@ data:extend({
       { type = "fluid", name = "liquid-white-liquor", amount = 40 },
     },
     results = {
-      { type = "item", name = "solid-wood-pulp", amount = 30 },
+      { type = "item", name = "solid-wood-pulp", amount = 50 },
       { type = "fluid", name = "liquid-black-liquor", amount_min = 35, amount_max = 40 },
     },
     always_show_products = true,
@@ -332,9 +332,8 @@ data:extend({
       { type = "item", name = "solid-wood-pulp", amount = 2 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 4 },
+      { type = "item", name = "solid-paper", amount = 2 },
     },
-    --main_product = "solid-paper",
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-paper"), 1, angelsmods.bioprocessing.number_tint),
     order = "ba",
@@ -352,10 +351,9 @@ data:extend({
       { type = "fluid", name = "gas-chlorine", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 5 },
+      { type = "item", name = "solid-paper", amount = 4 },
       { type = "item", name = "solid-sodium-hypochlorite", amount = 2 },
     },
-    --main_product = "solid-paper",
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-paper"), 2, angelsmods.bioprocessing.number_tint),
     crafting_machine_tint = AF.get_recipe_tints({
@@ -376,16 +374,15 @@ data:extend({
     ingredients = {
       { type = "item", name = "solid-wood-pulp", amount = 2 },
       { type = "item", name = "solid-sodium-hydroxide", amount = 2 },
-      { type = "fluid", name = "gas-oxygen", amount = 60 },
-      { type = "fluid", name = "gas-sulfur-dioxide", amount = 40 },
-      { type = "fluid", name = "water", amount = 100 },
+      { type = "fluid", name = "gas-oxygen", amount = 40 },
+      { type = "fluid", name = "gas-sulfur-dioxide", amount = 20 },
+      { type = "fluid", name = "water", amount = 60 },
     },
     results = {
-      { type = "item", name = "solid-paper", amount = 6 },
+      { type = "item", name = "solid-paper", amount = 8 },
       { type = "item", name = "solid-sodium-carbonate", amount = 2 },
-      { type = "fluid", name = "water-yellow-waste", amount = 100 },
+      { type = "fluid", name = "water-yellow-waste", amount = 60 },
     },
-    --main_product = "solid-paper",
     allow_decomposition = false,
     icons = AF.add_number_icon_layer(AF.get_object_icons("solid-paper"), 3, angelsmods.bioprocessing.number_tint),
     crafting_machine_tint = AF.get_recipe_tints({ "water-yellow-waste", "water", "gas-oxygen", "gas-sulfur-dioxide" }),

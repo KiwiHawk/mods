@@ -229,8 +229,6 @@ if mods["bobplates"] then
       "bob-resin-wood",
       "solid-resin",
     })
-    OV.remove_unlock("plastics", "synthetic-wood")
-    OV.add_unlock("plastic-1", "synthetic-wood")
   end
 end
 

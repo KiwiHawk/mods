@@ -76,8 +76,6 @@ end
 
 if angelsmods.industries then
 else
-  OV.remove_unlock("bio-paper-1", "circuit-paper-board")
-
   if bobmods and bobmods.plates then
     OV.patch_recipes({
       { name = "algae-brown-burning", results = { { "!!" }, { name = "solid-lithium", amount = 1, type = "item" } } },
@@ -102,32 +100,6 @@ if data.raw.tile["frozen-snow-0"] then
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
   data.raw.tree["desert-tree"].autoplace.tile_restriction =
     alien_biomes.list_tiles(alien_biomes.exclude_tags(alien_biomes.all_tiles(), { "frozen", "volcanic" }))
-end
-
---ADDED RECIPES BOBS
-if bobmods then
-  if bobmods.electronics and angelsmods.triggers.paper then
-    data:extend({
-      --CIRCUIT BOARD
-      {
-        type = "recipe",
-        name = "wooden-board-paper",
-        category = "advanced-crafting",
-        subgroup = "bio-paper",
-        enabled = false,
-        energy_required = 4,
-        ingredients = {
-          { type = "item", name = "solid-paper", amount = 2 },
-        },
-        results = {
-          { type = "item", name = "wooden-board", amount = 1 },
-        },
-        icon_size = 32,
-        order = "m",
-      },
-    })
-    OV.add_unlock("bio-paper-1", "wooden-board-paper")
-  end
 end
 
 --ADDED RECIPES FOR BOBS ARTIFACTS

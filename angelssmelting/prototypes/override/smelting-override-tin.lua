@@ -124,22 +124,7 @@ end
 -------------------------------------------------------------------------------
 if angelsmods.trigger.smelting_products["tin"].wire then
   -- move tinned wire to electronics for circuit wires
-  OV.patch_recipes({
-    {
-      name = "green-wire",
-      ingredients = {
-        { type = "item", name = "angels-wire-tin", amount = "copper-cable" },
-      },
-    },
-    {
-      name = "red-wire",
-      ingredients = {
-        { type = "item", name = "angels-wire-tin", amount = "copper-cable" },
-      },
-    },
-  })
   OV.add_unlock("electronics", "basic-tinned-copper-wire")
-  OV.remove_prereq("electronics", "angels-tin-smelting-1")
 
   if data.raw.item["tinned-copper-cable"] then -- bob electronics
     OV.global_replace_item("angels-wire-tin", "tinned-copper-cable")
@@ -166,6 +151,44 @@ if angelsmods.trigger.smelting_products["tin"].wire then
         },
       })
     end
+
+    OV.patch_recipes({
+      {
+        name = "green-wire",
+        ingredients = {
+          { "!!" },
+          { type = "item", name = "tinned-copper-cable", amount = 1 },
+          { type = "item", name = "electronic-circuit", amount = 1 },
+        },
+      },
+      {
+        name = "red-wire",
+        ingredients = {
+          { "!!" },
+          { type = "item", name = "tinned-copper-cable", amount = 1 },
+          { type = "item", name = "electronic-circuit", amount = 1 },
+        },
+      },
+    })
+  else
+    OV.patch_recipes({
+      {
+        name = "green-wire",
+        ingredients = {
+          { "!!" },
+          { type = "item", name = "angels-wire-tin", amount = 1 },
+          { type = "item", name = "electronic-circuit", amount = 1 },
+        },
+      },
+      {
+        name = "red-wire",
+        ingredients = {
+          { "!!" },
+          { type = "item", name = "angels-wire-tin", amount = 1 },
+          { type = "item", name = "electronic-circuit", amount = 1 },
+        },
+      },
+    })
   end
 else
   angelsmods.functions.add_flag("angels-wire-tin", "hidden")

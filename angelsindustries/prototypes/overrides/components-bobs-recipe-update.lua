@@ -7,7 +7,6 @@ if angelsmods.industries.components then
   if mods["bobassembly"] and settings.startup["bobmods-assembly-electronicmachines"].value then -- electronic assemblers
     OV.patch_recipes({
       { name = "circuit-grey-board", category = "electronics" },
-      { name = "circuit-grey-board-alternative", category = "electronics" },
       { name = "circuit-red-board", category = "electronics" },
       { name = "circuit-green-board", category = "electronics-machine" },
       { name = "circuit-orange-board", category = "electronics-machine" },
@@ -51,7 +50,6 @@ if angelsmods.industries.components then
   -- BOB ELECTRONICS ----------------------------------------------------------
   -----------------------------------------------------------------------------
   if mods["bobelectronics"] then
-    OV.disable_recipe("wooden-board-paper")
     OV.disable_recipe("superior-circuit-board")
   end
 

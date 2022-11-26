@@ -40,7 +40,6 @@ else
     "bio-resin-tree",
     "bio-resin-resin-liquification",
     "bio-resin",
-    "bio-resin-wood-reprocessing",
   })
   angelsmods.functions.add_flag("tree-temperate-seed", "hidden")
   angelsmods.functions.add_flag("bio-resin", "hidden")
@@ -76,6 +75,22 @@ else
 end
 
 if angelsmods.triggers.paper then
+  OV.patch_recipes({
+    {
+      name = "green-wire",
+      ingredients = {
+        { type = "item", name = "solid-paper", amount = "electronic-circuit" },
+      },
+    },
+    {
+      name = "red-wire",
+      ingredients = {
+        { type = "item", name = "solid-paper", amount = "electronic-circuit" },
+      },
+    },
+  })
+  OV.add_prereq("circuit-network", "bio-paper-1")
+  OV.add_prereq("sodium-processing", "bio-paper-2")
 else
   OV.hide_recipe({
     "solid-wood-pulp",
@@ -90,6 +105,7 @@ else
     "kraft-recovery",
     "kraft-causting",
     "solid-alginic-acid",
+    "solid-sodium-hypochlorite-solid-salt",
   })
   angelsmods.functions.add_flag({
     "pulping-liquor",
@@ -113,7 +129,8 @@ else
       ingredients = { { name = "paste-cellulose", amount = "solid-wood-pulp" } },
     },
   })
-  --rereq clean-out
+  --prereq clean-out
   OV.remove_prereq("gardens-2", "bio-paper-1")
   OV.remove_unlock("bio-processing-brown", "solid-alginic-acid")
+  OV.remove_unlock("sodium-processing", "solid-sodium-hypochlorite-solid-salt")
 end

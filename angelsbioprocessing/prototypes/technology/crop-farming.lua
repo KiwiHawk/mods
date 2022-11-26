@@ -42,7 +42,6 @@ data:extend({
     order = "c-a",
     prerequisites = {
       "bio-farm-1",
-      "bio-paper-1",
       "logistic-science-pack",
     },
     effects = {
@@ -77,6 +76,7 @@ data:extend({
     prerequisites = {
       "bio-farm-alien",
       "chemical-science-pack",
+      "bio-paper-1",
     },
     effects = {
       {

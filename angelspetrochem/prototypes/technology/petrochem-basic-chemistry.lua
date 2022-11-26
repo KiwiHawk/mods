@@ -822,6 +822,10 @@ data:extend({
         type = "unlock-recipe",
         recipe = "solid-sodium-sulfate-separation",
       },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-sodium-hypochlorite-solid-salt",
+      },
     },
     unit = {
       count = 50,

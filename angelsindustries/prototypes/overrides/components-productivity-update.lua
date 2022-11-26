@@ -16,7 +16,6 @@ if angelsmods.industries.components then
   angelsmods.functions.allow_productivity("electronic-parts-cpu")
   -- boards
   angelsmods.functions.allow_productivity("circuit-grey-board")
-  angelsmods.functions.allow_productivity("circuit-grey-board-alternative")
   angelsmods.functions.allow_productivity("circuit-red-board")
   angelsmods.functions.allow_productivity("circuit-green-board")
   angelsmods.functions.allow_productivity("circuit-orange-board")

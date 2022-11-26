@@ -539,27 +539,6 @@ data:extend({
     }),
     order = "c[processing]-b[solid-resin]-a[liquification]",
   },
-  {
-    type = "recipe",
-    name = "bio-resin-wood-reprocessing",
-    category = "bio-processor",
-    subgroup = "bio-arboretum-temperate",
-    enabled = false,
-    energy_required = 3,
-    ingredients = {
-      { type = "item", name = "wood", amount = 10 },
-    },
-    results = {
-      { type = "item", name = "solid-resin", amount = 1 },
-    },
-    main_product = "solid-resin",
-    always_show_products = true,
-    order = "c[processing]-b[solid-resin]-b[wood-reprocessing]",
-    crafting_machine_tint = {
-      primary = { r = 240 / 255, g = 157 / 255, b = 14 / 255, a = 1 },
-      secondary = { r = 240 / 255, g = 217 / 255, b = 55 / 255, a = 1 },
-    },
-  },
   -- SWAMP WOOD GENERATOR
   {
     type = "recipe",

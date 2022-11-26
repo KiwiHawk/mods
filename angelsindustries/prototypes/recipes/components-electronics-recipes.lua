@@ -239,30 +239,12 @@ if angelsmods.industries.components then
     },
     {
       type = "recipe",
-      name = "circuit-grey-board-alternative",
-      energy_required = 0.5,
-      category = "crafting",
-      subgroup = "angels-board",
-      enabled = false,
-      ingredients = {
-        { type = "item", name = "solid-paper", amount = 2 },
-      },
-      allow_as_intermediate = false, -- prefer the wood recipe for handcrafing
-      results = {
-        { type = "item", name = "circuit-grey-board", amount = 2 },
-      },
-      allow_decomposition = true,
-      icon_size = 32,
-      order = "g",
-    },
-    {
-      type = "recipe",
       name = "circuit-red-board",
       energy_required = 0.5,
       category = "crafting",
       enabled = false,
       ingredients = {
-        { type = "item", name = "solid-paper", amount = 1 },
+        { type = "item", name = "wood", amount = 1 },
       },
       result = "circuit-red-board",
       allow_decomposition = true,

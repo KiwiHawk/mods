@@ -7,7 +7,6 @@ end
 
 if angelsmods.industries and angelsmods.industries.overhaul then
   OV.patch_recipes({ { name = "algae-brown-burning", results = { { "!!" }, { name = "solid-lithium", amount = 2 } } } })
-  -- OV.remove_unlock("bio-paper-1", "circuit-paper-board")
 
   -- MODULES
   OV.modify_input("speed-module", { "crystal-splinter-blue" })
@@ -99,3 +98,13 @@ else
     --"crystal-full-green" -- Used for agriculture modules
   }, "hidden")
 end
+
+OV.patch_recipes({
+  {
+    name = "rail",
+    ingredients = {
+      { type = "item", name = "wood", amount = "iron-stick" },
+    },
+  },
+})
+OV.add_prereq("railway", "bio-arboretum-1")

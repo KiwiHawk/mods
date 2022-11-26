@@ -7,7 +7,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-brown",
+      "bio-processing-basic",
       "bio-nutrient-paste",
       "chlorine-processing-1",
     },

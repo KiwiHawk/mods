@@ -13,7 +13,7 @@ if angelsmods.industries.components then
       prerequisites = {
         --"angels-lead-smelting-1",
         "angels-sulfur-processing-1",
-        "bio-paper-1",
+--        "bio-paper-1",
       },
       effects = {
         {

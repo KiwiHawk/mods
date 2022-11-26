@@ -51,6 +51,23 @@ if mods["bobplates"] then
   OV.add_prereq("bio-processing-crystal-splinter-1", "grinding")
 end
 
+if mods["bobelectronics"] then
+  OV.patch_recipes({
+    {
+      name = "phenolic-board",
+      ingredients = {
+        { "!!" },
+        { name = "resin", amount = 1 },
+        { name = "solid-paper", amount = 4 },
+      }
+    }
+  })
+  OV.add_prereq("advanced-electronics", "bio-paper-1")
+
+  OV.remove_unlock("plastics", "synthetic-wood")
+  OV.disable_recipe({ "synthetic-wood" })
+end
+
 -- everything below this should be rewritten and organized as it's becomming a mess
 if bobmods then
   OV.patch_recipes({
@@ -59,6 +76,6 @@ if bobmods then
 end
 
 if mods["bobassembly"] and settings.startup["bobmods-assembly-burner"].value == true then
-  OV.remove_prereq("bio-processing-brown", "automation")
-  OV.add_prereq("bio-processing-brown", "basic-automation")
+  OV.remove_prereq("bio-processing-basic", "automation")
+  OV.add_prereq("bio-processing-basic", "basic-automation")
 end

@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "technology",
-    name = "bio-processing-brown",
+    name = "bio-processing-basic",
     icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
     icon_size = 128,
     order = "c-a",
@@ -12,10 +12,6 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "algae-farm",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "solid-alginic-acid",
       },
       {
         type = "unlock-recipe",
@@ -42,8 +38,8 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      "bio-processing-brown",
-      "water-treatment",
+      "bio-processing-basic",
+      "basic-chemistry",
     },
     effects = {
       {
@@ -52,15 +48,40 @@ data:extend({
       },
       {
         type = "unlock-recipe",
-        recipe = "algae-brown",
-      },
-      {
-        type = "unlock-recipe",
         recipe = "algae-green",
       },
       {
         type = "unlock-recipe",
         recipe = "gas-methanol-from-wood",
+      },
+    },
+    unit = {
+      count = 50,
+      ingredients = {
+        { type = "item", name = "automation-science-pack", amount = 1 },
+      },
+      time = 30,
+    },
+  },
+  {
+    type = "technology",
+    name = "bio-processing-brown",
+    icon = "__angelsbioprocessing__/graphics/technology/algae-farm-tech.png",
+    icon_size = 128,
+    order = "c-a",
+    prerequisites = {
+      "logistic-science-pack",
+      "bio-processing-green",
+      "water-treatment",
+    },
+    effects = {
+      {
+        type = "unlock-recipe",
+        recipe = "algae-brown",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "solid-alginic-acid",
       },
       {
         type = "unlock-recipe",
@@ -75,9 +96,11 @@ data:extend({
       count = 50,
       ingredients = {
         { type = "item", name = "automation-science-pack", amount = 1 },
+        { type = "item", name = "logistic-science-pack", amount = 1 },
       },
       time = 30,
     },
+    ignore_tech_cost_multiplier = true,
   },
   {
     type = "technology",
@@ -86,8 +109,7 @@ data:extend({
     icon_size = 128,
     order = "c-a",
     prerequisites = {
-      --"bio-processing-brown",
-      "bio-processing-green",
+      "bio-processing-brown",
       "angels-nitrogen-processing-2",
       "thermal-water-extraction",
     },

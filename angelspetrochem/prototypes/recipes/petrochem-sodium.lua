@@ -310,4 +310,23 @@ data:extend({
     }),
     order = "f[liquid-sodium-hydroxide]-c[solid-sodium-perchlorate]",
   },
+  {
+    type = "recipe",
+    name = "solid-sodium-hypochlorite-solid-salt",
+    category = "liquifying",
+    subgroup = "petrochem-sodium",
+    energy_required = 2,
+    enabled = false,
+    ingredients = {
+      { type = "item", name = "solid-sodium-hypochlorite", amount = 5 },
+    },
+    results = {
+      { type = "item", name = "solid-salt", amount = 5 },
+      { type = "fluid", name = "gas-oxygen", amount = 50 },
+    },
+    main_product = "solid-salt",
+    icon_size = 32,
+    crafting_machine_tint = AF.get_recipe_tints({"oxygen"}),
+    order = "g[recycling]-a[solid-sodium-hypochlorite-solid-salt]",
+  },
 })
