@@ -32,7 +32,6 @@ else
   data.raw["assembling-machine"]["chemical-plant"].icon_size = nil
   data.raw["assembling-machine"]["chemical-plant"].icons = util.table.deepcopy(data.raw["item"]["chemical-plant"].icons)
   data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "chemical-plant"
-  angelsmods.functions.add_crafting_category("assembling-machine", "chemical-plant", "liquifying")
 end
 
 -- oil
@@ -172,6 +171,7 @@ OV.patch_recipes({
     ingredients = {
       { type = "item", name = "rocket-booster", amount = 1 },
     },
+    category = "advanced-chemistry",
   },
 })
 OV.add_prereq("rocketry", "rocket-booster-1")
